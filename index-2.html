@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="http://d3js.org/d3.v7.min.js"> </script>
+  </head>
+  <body>
+    <div class="menu"> 
+      <div class="nav"> <a href="index.html">Главная</a><a class="selected" href="index-2.html">Рецепты</a><a href="#">Кулинарная школа</a><a href="#">Видео рецепты</a>
+      </div>
+    </div>
+    <div class="main-block">
+      <div class="content2">
+        <div class="text3"> 
+          <details>
+            <summary> Сортировка:</summary><span>Первый уровень </span><br/>
+            <select name="l1">
+              <option value="0" selected="selected">Нет</option>
+              <option value="1">Тип</option>
+              <option value="2">Название</option>
+              <option value="3">Сложность</option>
+              <option value="4">Время приготовления</option>
+            </select><br/><span>Второй уровень</span><br/>
+            <select name="l2"> 
+              <option value="0" selected="selected">Нет</option>
+              <option value="1">Тип</option>
+              <option value="2">Название</option>
+              <option value="3">Сложность</option>
+              <option value="4">Время приготовления</option>
+            </select><br/><span>Третий уровень</span><br/>
+            <select name="l3"> 
+              <option value="0" selected="selected">Нет</option>
+              <option value="1">Тип</option>
+              <option value="2">Название</option>
+              <option value="3">Сложность</option>
+              <option value="4">Время приготовления</option>
+            </select><br/><br/>
+            <button>Сортировать </button>
+          </details><br/>
+          <details> 
+            <summary>Фильтр</summary>
+            <lable>Тип</lable>
+            <input type="text" name="tip"/><br/>
+            <lable>Время приготовления: </lable><br/>
+            <lable>от</lable>
+            <input type="number" name="t1" min="1" max="300"/>
+            <lable>до</lable>
+            <input type="number" name="t2" min="1" max="300"/><br/>
+            <lable>Сложность:</lable><br/>
+            <lable>от</lable>
+            <input type="number" name="n1" max="10" min="1"/>
+            <lable>до</lable>
+            <input type="number" name="n1" max="10" min="1"/><br/><br/>
+            <button>Найти</button>
+          </details><br/>
+          <details>
+            <summary>График</summary><span>По оси OX: </span><br/>
+            <form>
+              <input type="radio" name="ox" value="Тип" checked/>
+              <lable>Тип</lable><br/>
+              <input type="radio" name="ox" value="Сложность"/>
+              <lable>Сложность</lable><br/><span>Результат: </span><br/>
+              <input type="checkbox" name="res_max" value="0"/>
+              <lable>Максимальное время</lable><br/>
+              <input type="checkbox" name="res_min" value="1"/>
+              <lable>Минимальное время</lable><br/><br/>
+              <input type=button value="Построить" onclick="drawGraph(this.form)">
+            </form>
+          </details>
+        </div>
+        <div class="text4"> 
+          <svg height="5">
+          </svg>
+          <table>
+            <tr>
+              <th>Тип</th>
+              <th>Название</th>
+              <th>Время приготовления</th>
+              <th>Сложность</th>
+            </tr>
+            <tr>
+              <td>Торт</td>
+              <td>Три шоколада</td>
+              <td>180</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>Кекс</td>
+              <td>Кекс в кружке</td>
+              <td>10</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Пирог</td>
+              <td>Шарлотка с яблоками</td>
+              <td>50</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Чизкейк</td>
+              <td>Банановый чизкейк без выпечки</td>
+              <td>240</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Пирог</td>
+              <td>Малинка</td>
+              <td>70</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Кекс</td>
+              <td>Банановый кекс на молоке</td>
+              <td>50</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Рулет</td>
+              <td>Творожный рулет с яблоками</td>
+              <td>30</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Пирог</td>
+              <td>Пирог с вареньем</td>
+              <td>120</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Кекс</td>
+              <td>Сырный кекс на кефире</td>
+              <td>70</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Рулет</td>
+              <td>Баунти (безвыпечки)</td>
+              <td>70</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Мусс</td>
+              <td>Шоколадно-сметанный мусс</td>
+              <td>140</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Пирог</td>
+              <td>Брауни</td>
+              <td>55</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Чизкейк</td>
+              <td>Классический</td>
+              <td>240</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Пирог</td>
+              <td>Королевская ватрушка</td>
+              <td>40</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Пироженое</td>
+              <td>Баунти</td>
+              <td>100</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Кекс</td>
+              <td>Шоколадный фондан</td>
+              <td>30</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Мусс</td>
+              <td>Кофейный кпем-мусс</td>
+              <td>30</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Торт</td>
+              <td>Сметанный торт</td>
+              <td>60</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Печенье</td>
+              <td>Сметанное печенье</td>
+              <td>30</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Кекс</td>
+              <td>Шоколадный трайфл с бананом и киви</td>
+              <td>90</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Конфеты</td>
+              <td>Рафаэлло</td>
+              <td>80</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Конфеты</td>
+              <td>Кейк-попс</td>
+              <td>90</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Печенье</td>
+              <td>Сладкая колбаса</td>
+              <td>180</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Торт</td>
+              <td>Карпезе</td>
+              <td>70</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Печенье</td>
+              <td>Ёлочки</td>
+              <td>105</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Пирог</td>
+              <td>Искушение в раю</td>
+              <td>80</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Торт</td>
+              <td>Ягодный торт-семифредо с теплым шоколадным соусом</td>
+              <td>300</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Торт</td>
+              <td>Эстерхази</td>
+              <td>70</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Печенье</td>
+              <td>Сладкие замороженные сэндвичи</td>
+              <td>120</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Печенье</td>
+              <td>Шоколадная колбаса с сухофруктами</td>
+              <td>180</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Пирог</td>
+              <td>Амереканский тыквенный пирог с корицей</td>
+              <td>120</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Кекс</td>
+              <td>Морковные кексы с имберем и корицей</td>
+              <td>60</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Печенье</td>
+              <td>Песочное печенье</td>
+              <td>60</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Кекс</td>
+              <td>Шоколадные кексы с жидкой сахарной начинкой</td>
+              <td>30</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Торт</td>
+              <td>Наполеон</td>
+              <td>240</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Печенье</td>
+              <td>Имбирное печенье с ванильным сахаром</td>
+              <td>20</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Печенье</td>
+              <td>Овсяное печенье с изюмом и кунжутом</td>
+              <td>25</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Пирог</td>
+              <td>Морковный пирог с минадалем</td>
+              <td>80</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Булочки</td>
+              <td>Шведские булочки с корицей</td>
+              <td>85</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Торт</td>
+              <td>Прага</td>
+              <td>80</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Пирог</td>
+              <td>Яблочный пирог</td>
+              <td>30</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Пирог</td>
+              <td>Шоколадный пирог с маскарпоне</td>
+              <td>30</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Печенье</td>
+              <td>Бакинское курабье</td>
+              <td>30</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Кекс</td>
+              <td>кекс апельсиновый</td>
+              <td>60</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Пирог</td>
+              <td>Клубничный пирог с ванилью</td>
+              <td>85</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td>Профитроли</td>
+              <td>Домашние заварные профитроли</td>
+              <td>60</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Конфеты</td>
+              <td>Шоколадные трюфели в какао</td>
+              <td>40</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Булочки</td>
+              <td>Чешская булочка трдло</td>
+              <td>60</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Торт</td>
+              <td>Три крема</td>
+              <td>60</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Торт</td>
+              <td>Мдовик</td>
+              <td>40</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Панна-котта</td>
+              <td>Панна-котта с клубникой</td>
+              <td>180</td>
+              <td>10</td>
+            </tr>
+          </table>
+        </div>
+        <script src="js/sort.js"></script>
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

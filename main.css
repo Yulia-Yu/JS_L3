@@ -1,0 +1,775 @@
+svg text {
+  font: 8px Verdana;
+  text-decoration-color: #6c0e1a;
+  color:#6c0e1a;
+  -webkit-text-stroke-width: 0.5;
+}
+svg path, line {
+  fill: none;
+  stroke: rgb(162, 18, 18);
+  width: 1px;
+}
+svg .grid-line {
+  stroke: rgb(104, 30, 30);
+  shape-rendering: crispedges;
+  stroke-opacity: 0.1;
+}
+
+body {
+  background-color: #eae0cc;
+  font-family: "Time New Roman";
+  
+}
+body p {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.7;
+  text-indent: 40px;
+  word-spacing: 10px;
+  font-weight: none;
+}
+body div {
+  height: auto;
+  width: 0 auto;
+  max-width: 1300px;
+  padding-bottom: 3px;
+}
+
+body a {
+  color: #000;
+}
+body a:hover {
+  background-color: #f5fffa;
+  color: #000;
+}
+body h1 {
+  text-align: center;
+}
+body span {
+  font-weight: normal;
+}
+body h3 {
+  font-style: italic;
+}
+body h2 {
+  text-align: center;
+}
+body li {
+  font-size: 20px;
+}
+body ul {
+  font-size: 20px;
+  font-style: italic;
+  margin: auto;
+}
+body span {
+  font-weight: bold;
+}
+body .menu {
+  background-color: #fff;
+  margin: 2% auto 0 auto;
+  font-weight: bold;
+  font-size: 22px;
+}
+body .selected {
+  background-color: #f5fffa;
+}
+body .nav {
+  display: grid;
+  background-color: inherit;
+  grid-template-rows: -webkit-max-content;
+  grid-template-rows: max-content;
+  grid-template-columns: repeat(6, auto);
+  justify-content: center;
+}
+body .nav a {
+  padding: 5px 20px;
+  margin: 3px;
+  color: #000;
+}
+body .nav a:hover {
+  background-color: #f5fffa;
+  text-decoration: none;
+}
+@media (max-width: 600px) {
+  body .nav {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
+    text-align: left;
+  }
+}
+.main-block {
+  width: 5px auto;
+  margin: auto;
+  background-color: #f5eee0;
+}
+.content,
+.text0,
+.text1,
+.tt1,
+.tt2,
+.tt3,
+.tt4,
+.tt5,
+.tt6,
+.tt7,
+.tt8,
+.tt9,
+.tt10,
+.tt11,
+.tt12,
+.tt13,
+.tt14,
+.tt15 {
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+}
+.content img,
+.text0 img,
+.text1 img,
+.tt1 img,
+.tt2 img,
+.tt3 img,
+.tt4 img,
+.tt5 img,
+.tt6 img,
+.tt7 img,
+.tt8 img,
+.tt9 img,
+.tt10 img,
+.tt11 img,
+.tt12 img,
+.tt13 img,
+.tt14 img,
+.tt15 img {
+  margin: auto;
+  height: 100%;
+  width: 50%;
+  -o-object-fit: fill;
+  object-fit: fill;
+  overflow: hidden;
+}
+.content p,
+.text0 p,
+.text1 p,
+.tt1 p,
+.tt2 p,
+.tt3 p,
+.tt4 p,
+.tt5 p,
+.tt6 p,
+.tt7 p,
+.tt8 p,
+.tt9 p,
+.tt10 p,
+.tt11 p,
+.tt12 p,
+.tt13 p,
+.tt14 p,
+.tt15 p {
+  padding: 1% 5%;
+  font-size: 20px;
+}
+.content h2,
+.text0 h2,
+.text1 h2,
+.tt1 h2,
+.tt2 h2,
+.tt3 h2,
+.tt4 h2,
+.tt5 h2,
+.tt6 h2,
+.tt7 h2,
+.tt8 h2,
+.tt9 h2,
+.tt10 h2,
+.tt11 h2,
+.tt12 h2,
+.tt13 h2,
+.tt14 h2,
+.tt15 h2 {
+  padding: 1% 0;
+}
+.content .text1,
+.text0 .text1,
+.text1 .text1,
+.tt1 .text1,
+.tt2 .text1,
+.tt3 .text1,
+.tt4 .text1,
+.tt5 .text1,
+.tt6 .text1,
+.tt7 .text1,
+.tt8 .text1,
+.tt9 .text1,
+.tt10 .text1,
+.tt11 .text1,
+.tt12 .text1,
+.tt13 .text1,
+.tt14 .text1,
+.tt15 .text1 {
+  background-color: #fff;
+  padding: 0;
+}
+.content .text1 h1,
+.text0 .text1 h1,
+.text1 .text1 h1,
+.tt1 .text1 h1,
+.tt2 .text1 h1,
+.tt3 .text1 h1,
+.tt4 .text1 h1,
+.tt5 .text1 h1,
+.tt6 .text1 h1,
+.tt7 .text1 h1,
+.tt8 .text1 h1,
+.tt9 .text1 h1,
+.tt10 .text1 h1,
+.tt11 .text1 h1,
+.tt12 .text1 h1,
+.tt13 .text1 h1,
+.tt14 .text1 h1,
+.tt15 .text1 h1 {
+  padding: 1% 0;
+}
+.content .tt5,
+.text0 .tt5,
+.text1 .tt5,
+.tt1 .tt5,
+.tt2 .tt5,
+.tt3 .tt5,
+.tt4 .tt5,
+.tt5 .tt5,
+.tt6 .tt5,
+.tt7 .tt5,
+.tt8 .tt5,
+.tt9 .tt5,
+.tt10 .tt5,
+.tt11 .tt5,
+.tt12 .tt5,
+.tt13 .tt5,
+.tt14 .tt5,
+.tt15 .tt5 {
+  margin: auto;
+  width: 52%;
+}
+.content .tt5 img,
+.text0 .tt5 img,
+.text1 .tt5 img,
+.tt1 .tt5 img,
+.tt2 .tt5 img,
+.tt3 .tt5 img,
+.tt4 .tt5 img,
+.tt5 .tt5 img,
+.tt6 .tt5 img,
+.tt7 .tt5 img,
+.tt8 .tt5 img,
+.tt9 .tt5 img,
+.tt10 .tt5 img,
+.tt11 .tt5 img,
+.tt12 .tt5 img,
+.tt13 .tt5 img,
+.tt14 .tt5 img,
+.tt15 .tt5 img {
+  inline: block;
+  width: 98%;
+  margin: 1%;
+}
+
+.content .text0,
+.text0 .text0,
+.text1 .text0,
+.tt1 .text0,
+.tt2 .text0,
+.tt3 .text0,
+.tt4 .text0,
+.tt5 .text0,
+.tt6 .text0,
+.tt7 .text0,
+.tt8 .text0,
+.tt9 .text0,
+.tt10 .text0,
+.tt11 .text0,
+.tt12 .text0,
+.tt13 .text0,
+.tt14 .text0,
+.tt15 .text0 {
+  margin: auto;
+  width: 52%;
+}
+
+.content .text0 img,
+.text0 .text0 img,
+.text1 .text0 img,
+.tt1 .text0 img,
+.tt2 .text0 img,
+.tt3 .text0 img,
+.tt4 .text0 img,
+.tt5 .text0 img,
+.tt6 .text0 img,
+.tt7 .text0 img,
+.tt8 .text0 img,
+.tt9 .text0 img,
+.tt10 .text0 img,
+.tt11 .text0 img,
+.tt12 .text0 img,
+.tt13 .text0 img,
+.tt14 .text0 img,
+.tt15 .text0 img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  inline: block;
+  width: 98%;
+  margin: 1%;
+}
+@media (max-width: 600px) {
+  .content p,
+  .text0 p,
+  .text1 p,
+  .tt1 p,
+  .tt2 p,
+  .tt3 p,
+  .tt4 p,
+  .tt5 p,
+  .tt6 p,
+  .tt7 p,
+  .tt8 p,
+  .tt9 p,
+  .tt10 p,
+  .tt11 p,
+  .tt12 p,
+  .tt13 p,
+  .tt14 p,
+  .tt15 p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}
+.content2,
+.image2,
+.text3,
+.text4 {
+  display: flex;
+}
+.text4 {
+  flex-direction: column;
+}
+.content2 .text3,
+.image2 .text3,
+.text3 .text3,
+.text4 .text3 {
+  width: 20%;
+  flex-direction: column;
+}
+.content2 .text3 details,
+.image2 .text3 details,
+.text3 .text3 details,
+.text4 .text3 details {
+  margin-top: 5%;
+  margin-left: 5%;
+}
+.content2 .text4,
+.image2 .text4,
+.text3 .text4,
+.text4 .text4 {
+  margin: auto;
+}
+.content2 .text4 table,
+.image2 .text4 table,
+.text3 .text4 table,
+.text4 .text4 table {
+  display: block;
+  float: right;
+  cellpadding: 5;
+  cellspacing: 0;
+  border: solid 2px;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 2%;
+}
+.content2 .text4 td,
+.image2 .text4 td,
+.text3 .text4 td,
+.text4 .text4 td,
+.content2 .text4 th,
+.image2 .text4 th,
+.text3 .text4 th,
+.text4 .text4 th {
+  border: solid 2px;
+}
+@media (max-width: 600px) {
+  .content2 .content2,
+  .image2 .content2,
+  .text3 .content2,
+  .text4 .content2 {
+    flex-direction: column;
+  }
+}
+.content2 details,
+.image2 details,
+.text3 details,
+.text4 details {
+  margin: 2%;
+}
+.content3,
+.t1,
+.t2,
+.t3,
+.t4,
+.t5,
+.t6,
+.t7,
+.text5,
+.text5-5,
+.text6,
+.text6-5,
+.text7 {
+  display: flex;
+  flex-direction: column;
+}
+.content3 img,
+.t1 img,
+.t2 img,
+.t3 img,
+.t4 img,
+.t5 img,
+.t6 img,
+.t7 img,
+.text5 img,
+.text5-5 img,
+.text6 img,
+.text6-5 img,
+.text7 img {
+  padding: 10px;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: fill;
+  object-fit: fill;
+  overflow: hidden;
+}
+.content3 h1,
+.t1 h1,
+.t2 h1,
+.t3 h1,
+.t4 h1,
+.t5 h1,
+.t6 h1,
+.t7 h1,
+.text5 h1,
+.text5-5 h1,
+.text6 h1,
+.text6-5 h1,
+.text7 h1 {
+  padding: 2%;
+}
+.content3 h2,
+.t1 h2,
+.t2 h2,
+.t3 h2,
+.t4 h2,
+.t5 h2,
+.t6 h2,
+.t7 h2,
+.text5 h2,
+.text5-5 h2,
+.text6 h2,
+.text6-5 h2,
+.text7 h2 {
+  padding: 1%;
+}
+.content3 .text5-5,
+.t1 .text5-5,
+.t2 .text5-5,
+.t3 .text5-5,
+.t4 .text5-5,
+.t5 .text5-5,
+.t6 .text5-5,
+.t7 .text5-5,
+.text5 .text5-5,
+.text5-5 .text5-5,
+.text6 .text5-5,
+.text6-5 .text5-5,
+.text7 .text5-5,
+.content3 .text6,
+.t1 .text6,
+.t2 .text6,
+.t3 .text6,
+.t4 .text6,
+.t5 .text6,
+.t6 .text6,
+.t7 .text6,
+.text5 .text6,
+.text5-5 .text6,
+.text6 .text6,
+.text6-5 .text6,
+.text7 .text6 {
+  padding: 0;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 60%;
+}
+.content3 .t1,
+.t1 .t1,
+.t2 .t1,
+.t3 .t1,
+.t4 .t1,
+.t5 .t1,
+.t6 .t1,
+.t7 .t1,
+.text5 .t1,
+.text5-5 .t1,
+.text6 .t1,
+.text6-5 .t1,
+.text7 .t1,
+.content3 .t2,
+.t1 .t2,
+.t2 .t2,
+.t3 .t2,
+.t4 .t2,
+.t5 .t2,
+.t6 .t2,
+.t7 .t2,
+.text5 .t2,
+.text5-5 .t2,
+.text6 .t2,
+.text6-5 .t2,
+.text7 .t2,
+.content3 .t3,
+.t1 .t3,
+.t2 .t3,
+.t3 .t3,
+.t4 .t3,
+.t5 .t3,
+.t6 .t3,
+.t7 .t3,
+.text5 .t3,
+.text5-5 .t3,
+.text6 .t3,
+.text6-5 .t3,
+.text7 .t3,
+.content3 .t4,
+.t1 .t4,
+.t2 .t4,
+.t3 .t4,
+.t4 .t4,
+.t5 .t4,
+.t6 .t4,
+.t7 .t4,
+.text5 .t4,
+.text5-5 .t4,
+.text6 .t4,
+.text6-5 .t4,
+.text7 .t4,
+.content3 .t5,
+.t1 .t5,
+.t2 .t5,
+.t3 .t5,
+.t4 .t5,
+.t5 .t5,
+.t6 .t5,
+.t7 .t5,
+.text5 .t5,
+.text5-5 .t5,
+.text6 .t5,
+.text6-5 .t5,
+.text7 .t5,
+.content3 .t6,
+.t1 .t6,
+.t2 .t6,
+.t3 .t6,
+.t4 .t6,
+.t5 .t6,
+.t6 .t6,
+.t7 .t6,
+.text5 .t6,
+.text5-5 .t6,
+.text6 .t6,
+.text6-5 .t6,
+.text7 .t6,
+.content3 .t7,
+.t1 .t7,
+.t2 .t7,
+.t3 .t7,
+.t4 .t7,
+.t5 .t7,
+.t6 .t7,
+.t7 .t7,
+.text5 .t7,
+.text5-5 .t7,
+.text6 .t7,
+.text6-5 .t7,
+.text7 .t7,
+.content3 .text6-5,
+.t1 .text6-5,
+.t2 .text6-5,
+.t3 .text6-5,
+.t4 .text6-5,
+.t5 .text6-5,
+.t6 .text6-5,
+.t7 .text6-5,
+.text5 .text6-5,
+.text5-5 .text6-5,
+.text6 .text6-5,
+.text6-5 .text6-5,
+.text7 .text6-5 {
+  background-color: #fff;
+  width: 60%;
+  margin: 10px auto;
+  padding: 10px;
+}
+@media (max-width: 600px) {
+  .content3 .t1,
+  .t1 .t1,
+  .t2 .t1,
+  .t3 .t1,
+  .t4 .t1,
+  .t5 .t1,
+  .t6 .t1,
+  .t7 .t1,
+  .text5 .t1,
+  .text5-5 .t1,
+  .text6 .t1,
+  .text6-5 .t1,
+  .text7 .t1,
+  .content3 .t2,
+  .t1 .t2,
+  .t2 .t2,
+  .t3 .t2,
+  .t4 .t2,
+  .t5 .t2,
+  .t6 .t2,
+  .t7 .t2,
+  .text5 .t2,
+  .text5-5 .t2,
+  .text6 .t2,
+  .text6-5 .t2,
+  .text7 .t2,
+  .content3 .t3,
+  .t1 .t3,
+  .t2 .t3,
+  .t3 .t3,
+  .t4 .t3,
+  .t5 .t3,
+  .t6 .t3,
+  .t7 .t3,
+  .text5 .t3,
+  .text5-5 .t3,
+  .text6 .t3,
+  .text6-5 .t3,
+  .text7 .t3,
+  .content3 .t4,
+  .t1 .t4,
+  .t2 .t4,
+  .t3 .t4,
+  .t4 .t4,
+  .t5 .t4,
+  .t6 .t4,
+  .t7 .t4,
+  .text5 .t4,
+  .text5-5 .t4,
+  .text6 .t4,
+  .text6-5 .t4,
+  .text7 .t4,
+  .content3 .t5,
+  .t1 .t5,
+  .t2 .t5,
+  .t3 .t5,
+  .t4 .t5,
+  .t5 .t5,
+  .t6 .t5,
+  .t7 .t5,
+  .text5 .t5,
+  .text5-5 .t5,
+  .text6 .t5,
+  .text6-5 .t5,
+  .text7 .t5,
+  .content3 .t6,
+  .t1 .t6,
+  .t2 .t6,
+  .t3 .t6,
+  .t4 .t6,
+  .t5 .t6,
+  .t6 .t6,
+  .t7 .t6,
+  .text5 .t6,
+  .text5-5 .t6,
+  .text6 .t6,
+  .text6-5 .t6,
+  .text7 .t6,
+  .content3 .t7,
+  .t1 .t7,
+  .t2 .t7,
+  .t3 .t7,
+  .t4 .t7,
+  .t5 .t7,
+  .t6 .t7,
+  .t7 .t7,
+  .text5 .t7,
+  .text5-5 .t7,
+  .text6 .t7,
+  .text6-5 .t7,
+  .text7 .t7,
+  .content3 .text6-5,
+  .t1 .text6-5,
+  .t2 .text6-5,
+  .t3 .text6-5,
+  .t4 .text6-5,
+  .t5 .text6-5,
+  .t6 .text6-5,
+  .t7 .text6-5,
+  .text5 .text6-5,
+  .text5-5 .text6-5,
+  .text6 .text6-5,
+  .text6-5 .text6-5,
+  .text7 .text6-5,
+  .content3 .text5-5,
+  .t1 .text5-5,
+  .t2 .text5-5,
+  .t3 .text5-5,
+  .t4 .text5-5,
+  .t5 .text5-5,
+  .t6 .text5-5,
+  .t7 .text5-5,
+  .text5 .text5-5,
+  .text5-5 .text5-5,
+  .text6 .text5-5,
+  .text6-5 .text5-5,
+  .text7 .text5-5,
+  .content3 .text6,
+  .t1 .text6,
+  .t2 .text6,
+  .t3 .text6,
+  .t4 .text6,
+  .t5 .text6,
+  .t6 .text6,
+  .t7 .text6,
+  .text5 .text6,
+  .text5-5 .text6,
+  .text6 .text6,
+  .text6-5 .text6,
+  .text7 .text6 {
+    width: 97%;
+  }
+}
+
+
+.grid {
+  margin: 0 auto;
+	padding: 30px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 30px;
+}
+
+.grid-item {
+	height: 300px;
+	background-color: #f6f4f4;
+}
+
+.grid-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
